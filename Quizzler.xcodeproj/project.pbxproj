@@ -61,48 +61,48 @@
 		633646BB1B8C657400FF45E2 /* Quizzler */ = {
 			isa = PBXGroup;
 			children = (
-				EBB1C72D1B946C580011F5C3 /* Controller */,
-				EBB1C72C1B946C530011F5C3 /* Model */,
-				EBB1C72B1B946C4B0011F5C3 /* View */,
-				633646BC1B8C657400FF45E2 /* Supporting Files */,
+				720B881922C851F2003F1EB0 /* Controller */,
+				720B881A22C851FC003F1EB0 /* Model */,
+				720B881B22C8520C003F1EB0 /* View */,
+				720B881C22C8523A003F1EB0 /* Supporting Files */,
 			);
 			path = Quizzler;
 			sourceTree = "<group>";
 		};
-		633646BC1B8C657400FF45E2 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				633646C71B8C657400FF45E2 /* LaunchScreen.xib */,
-				633646BD1B8C657400FF45E2 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		EBB1C72B1B946C4B0011F5C3 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				633646C21B8C657400FF45E2 /* Main.storyboard */,
-				633646C51B8C657400FF45E2 /* Images.xcassets */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
-		EBB1C72C1B946C530011F5C3 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				7266D27422C83AF900E0AC05 /* Question.swift */,
-				7266D27622C8400800E0AC05 /* QuestionBank.swift */,
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
-		EBB1C72D1B946C580011F5C3 /* Controller */ = {
+		720B881922C851F2003F1EB0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				633646BE1B8C657400FF45E2 /* AppDelegate.swift */,
 				633646C01B8C657400FF45E2 /* ViewController.swift */,
 			);
-			name = Controller;
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		720B881A22C851FC003F1EB0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7266D27422C83AF900E0AC05 /* Question.swift */,
+				7266D27622C8400800E0AC05 /* QuestionBank.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		720B881B22C8520C003F1EB0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				633646C21B8C657400FF45E2 /* Main.storyboard */,
+				633646C51B8C657400FF45E2 /* Images.xcassets */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		720B881C22C8523A003F1EB0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				633646C71B8C657400FF45E2 /* LaunchScreen.xib */,
+				633646BD1B8C657400FF45E2 /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
