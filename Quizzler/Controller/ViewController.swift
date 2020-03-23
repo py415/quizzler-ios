@@ -9,86 +9,65 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     // Outlets
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
-
+    @IBOutlet weak var score: UILabel!
+    
     // Properties
-    let allQuestions = QuestionBank()
-    var pickedAnswer: Bool = false
-    var questionNumber: Int = 0
-    var score: Int = 0
-
+    var questionBank = QuestionBank()
+    
     override func viewDidLoad() {
-
+        
         super.viewDidLoad()
-
-        nextQuestion()
-
+        
+        updateUI()
+        
     }
-
+    
     @IBAction func answerPressed(_ sender: AnyObject) {
-
-        if sender.tag == 1 {
-            pickedAnswer = true
-        } else if sender.tag == 2 {
-            pickedAnswer = false
-        } else {
-            print("ERROR! Selected answer is invalid or does not exist!")
-        }
-
-        checkAnswer()
-        questionNumber += 1
-        nextQuestion()
-
-    }
-
-    func updateUI() {
         
-        progressBar.progress = Float(questionNumber) / Float(allQuestions.list.count)
+        let questionNumber = questionBank.questionNumber
+        let userAnswer = sender.tag ?? -1
+        let userGotItRight = questionBank.checkAnswer(userAnswer)
         
-    }
-
-    func nextQuestion() {
-
-        if questionNumber < allQuestions.list.count {
-            questionLabel.text = allQuestions.list[questionNumber].questionText
+        // Check to see if current question number exceeds the total number of questions in the question bank
+        if questionNumber + 1 < questionBank.questionBank.count {
+            // Check to see if user answer was correct
+            if userGotItRight {
+                // User answer was correct
+                ProgressHUD.showSuccess("Correct")
+                print("Question #\(questionNumber). Correct!")
+            } else {
+                // User answer was wrong
+                ProgressHUD.showError("Wrong")
+                print("Question #\(questionNumber). Wrong!")
+            }
+            
+            questionBank.nextQuestion()
             updateUI()
         } else {
+            // Restart quiz when user reaches final question in question bank
             print("End of Quiz!")
             let alert = UIAlertController(title: "Awesome!", message: "You've finished all the questions, do you want to start over?", preferredStyle: .alert)
             let restartAction = UIAlertAction(title: "Restart", style: .default) { (_) in
-                self.startOver()
+                self.questionBank.startOver()
+                self.updateUI()
             }
-
+            
             alert.addAction(restartAction)
             present(alert, animated: true, completion: nil)
         }
-
+        
     }
-
-    func checkAnswer() {
-
-        let correctAnswer = allQuestions.list[questionNumber].answer
-
-        if correctAnswer == pickedAnswer {
-            print("Question #\(questionNumber). Correct!")
-            ProgressHUD.showSuccess("Correct")
-            score += 1
-        } else {
-            print("Question #\(questionNumber). Wrong!")
-            ProgressHUD.showError("Wrong")
-        }
-
+    
+    @objc func updateUI() {
+        
+        questionLabel.text = questionBank.getQuestionText()
+        progressBar.progress = questionBank.getProgress()
+        score.text = "Score: \(questionBank.getScore())"
+        
     }
-
-    func startOver() {
-
-        questionNumber = 0
-        score = 0
-        nextQuestion()
-
-    }
-
+    
 }
