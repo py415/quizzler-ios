@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Question {
+struct Question {
 
     // Properties
     let questionText: String

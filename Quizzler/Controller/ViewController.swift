@@ -12,9 +12,7 @@ class ViewController: UIViewController {
 
     // Outlets
     @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet weak var scoreLabel: UILabel!
-    @IBOutlet var progressBar: UIView!
-    @IBOutlet weak var progressLabel: UILabel!
+    @IBOutlet weak var progressBar: UIProgressView!
 
     // Properties
     let allQuestions = QuestionBank()
@@ -47,12 +45,9 @@ class ViewController: UIViewController {
     }
 
     func updateUI() {
-
-        scoreLabel.text = "Score: \(score)"
-        progressLabel.text = "\(questionNumber + 1) / \(allQuestions.list.count)"
-
-        progressBar.frame.size.width = (view.frame.size.width / 13) * CGFloat(questionNumber + 1)
-
+        
+        progressBar.progress = Float(questionNumber) / Float(allQuestions.list.count)
+        
     }
 
     func nextQuestion() {
