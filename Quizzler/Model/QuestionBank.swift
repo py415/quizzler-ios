@@ -46,20 +46,26 @@ struct QuestionBank {
     
     func getQuestionText() -> String {
         
-        return questionBank[questionNumber].questionText
+        var questionText: String = ""
+        
+        if questionNumber < questionBank.count {
+            questionText = questionBank[questionNumber].questionText
+        }
+        
+        return questionText
         
     }
     
     func getProgress() -> Float {
         
-        let progress = Float(questionNumber + 1) / Float(questionBank.count)
+        let progress = Float(questionNumber) / Float(questionBank.count)
         return progress
         
     }
     
     mutating func nextQuestion() {
         
-        if questionNumber + 1 < questionBank.count {
+        if questionNumber < questionBank.count {
             questionNumber += 1
         }
         

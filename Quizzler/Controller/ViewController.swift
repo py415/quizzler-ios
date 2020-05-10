@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ProgressHUD
 
 class ViewController: UIViewController {
     
@@ -33,22 +34,23 @@ class ViewController: UIViewController {
         let userGotItRight = questionBank.checkAnswer(userAnswer)
         
         // Check to see if current question number exceeds the total number of questions in the question bank
-        if questionNumber + 1 < questionBank.questionBank.count {
+        if questionNumber < (questionBank.questionBank.count - 1) {
             // Check to see if user answer was correct
             if userGotItRight {
                 // User answer was correct
                 ProgressHUD.showSuccess("Correct")
-                print("Question #\(questionNumber). Correct!")
             } else {
                 // User answer was wrong
                 ProgressHUD.showError("Wrong")
-                print("Question #\(questionNumber). Wrong!")
             }
             
             questionBank.nextQuestion()
             updateUI()
         } else {
             // Restart quiz when user reaches final question in question bank
+            questionBank.nextQuestion()
+            updateUI()
+            
             print("End of Quiz!")
             let alert = UIAlertController(title: "Awesome!", message: "You've finished all the questions, do you want to start over?", preferredStyle: .alert)
             let restartAction = UIAlertAction(title: "Restart", style: .default) { (_) in
