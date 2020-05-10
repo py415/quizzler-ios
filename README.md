@@ -2,7 +2,7 @@
 
 ## Table of Contents
 1. [Overview](#Overview)
-2. [Product Spec](#Product-Spec)
+2. [Product Specs](#Product-Specs)
 3. [App Walkthrough](#App-Walkthrough)
 4. [Open-source libraries used](#Open-source-libraries-used)
 5. [Credits](#Credits)
@@ -12,7 +12,7 @@
 
 Quizzler is a trivia quiz app, inspired by the awesome “Quiz Up” game.
 
-## Product Spec
+## Product Specs
 ### User Stories
 
 - [X] User shall be able to answer questions in a true or false format.
@@ -24,7 +24,7 @@ Quizzler is a trivia quiz app, inspired by the awesome “Quiz Up” game.
 
 Here's a GIF of how the app works:
 
-<img src="https://i.imgur.com/7vE6cH9.gif" width=250><br>
+<img src="https://user-images.githubusercontent.com/35745973/81490217-15ce0780-9234-11ea-8845-acfaf2d4b14c.gif" width=250><br>
 
 ## Open-source libraries used
 
@@ -32,4 +32,4 @@ Here's a GIF of how the app works:
 
 ## Credits
 
->This is a companion project to The App Brewery's Complete App Developement Bootcamp, check out the full course at [www.appbrewery.co](https://www.appbrewery.co/)
+>This is a companion project to The App Brewery's Complete App Development Bootcamp, check out the full course at [www.appbrewery.co](https://www.appbrewery.co/)
