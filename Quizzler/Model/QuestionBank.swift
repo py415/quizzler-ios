@@ -10,7 +10,7 @@ import Foundation
 
 struct QuestionBank {
     
-    // Properties
+    // MARK: - Properties
     var questionBank = [
         Question(text: "A slug's blood is green.", correctAnswer: true),
         Question(text: "Approximately one quarter of human bones are in the feet.", correctAnswer: true),

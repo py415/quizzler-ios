@@ -85,8 +85,8 @@
 			children = (
 				720B881922C851F2003F1EB0 /* Controller */,
 				720B881A22C851FC003F1EB0 /* Model */,
-				720B881B22C8520C003F1EB0 /* View */,
 				720B881C22C8523A003F1EB0 /* Supporting Files */,
+				720B881B22C8520C003F1EB0 /* View */,
 			);
 			path = Quizzler;
 			sourceTree = "<group>";

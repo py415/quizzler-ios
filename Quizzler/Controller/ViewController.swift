@@ -11,13 +11,13 @@ import ProgressHUD
 
 class ViewController: UIViewController {
     
-    // Outlets
+    // MARK: - Outlets
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var score: UILabel!
     
-    // Properties
-    var questionBank = QuestionBank()
+    // MARK: - Properties
+    private var questionBank = QuestionBank()
     
     override func viewDidLoad() {
         
@@ -26,6 +26,8 @@ class ViewController: UIViewController {
         updateUI()
         
     }
+    
+    // MARK: - IBAction Section
     
     @IBAction func answerPressed(_ sender: AnyObject) {
         
@@ -64,7 +66,9 @@ class ViewController: UIViewController {
         
     }
     
-    @objc func updateUI() {
+    // MARK: - Private Function Section
+    
+    @objc private func updateUI() {
         
         questionLabel.text = questionBank.getQuestionText()
         progressBar.progress = questionBank.getProgress()

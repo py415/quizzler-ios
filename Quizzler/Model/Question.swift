@@ -10,7 +10,7 @@ import Foundation
 
 struct Question {
 
-    // Properties
+    // MARK: - Properties
     let questionText: String
     let answer: Bool
 
