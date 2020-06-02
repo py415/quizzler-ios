@@ -4,7 +4,7 @@
 1. [Overview](#Overview)
 2. [Product Specs](#Product-Specs)
 3. [App Walkthrough](#App-Walkthrough)
-4. [Open-source libraries used](#Open-source-libraries-used)
+4. [Libraries](#Libraries)
 5. [Credits](#Credits)
 
 ## Overview
@@ -24,12 +24,12 @@ Quizzler is a trivia quiz app, inspired by the awesome “Quiz Up” game.
 
 Here's a GIF of how the app works:
 
-<img src="https://user-images.githubusercontent.com/35745973/81490217-15ce0780-9234-11ea-8845-acfaf2d4b14c.gif" width=250><br>
+<img src="https://user-images.githubusercontent.com/35745973/81490217-15ce0780-9234-11ea-8845-acfaf2d4b14c.gif" width=250>
 
-## Open-source libraries used
+## Libraries
 
 - [ProgressHUD](https://github.com/relatedcode/ProgressHUD) - A lightweight and easy-to-use HUD for iOS (written in Objective-C).
 
 ## Credits
 
->This is a companion project to The App Brewery's Complete App Development Bootcamp, check out the full course at [www.appbrewery.co](https://www.appbrewery.co/)
+>This is a companion project to The App Brewery's Complete App Development Bootcamp, check out the full course at [www.appbrewery.co](https://www.appbrewery.co/).
